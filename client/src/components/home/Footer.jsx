@@ -120,7 +120,7 @@ const Footer = () => {
               backgroundColor: 'transparent',
               color: styles?.mainTheme?.color,
               border: '2px solid #6e6e6eff',
-              padding: '14px 40px',
+              padding: '12px 42px',
               fontSize: '16px',
               borderRadius: '30px',
               cursor: 'pointer',

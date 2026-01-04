@@ -150,7 +150,7 @@ const Home = () => {
   ];
 
   const buttonClass =
-    'knowme-button ' +
+    'knowme-button' +
     (themeValues.mode === 'light' ? 'light-mode' : 'dark-mode');
 
   const handleRedirect = (url) => {
