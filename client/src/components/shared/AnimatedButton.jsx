@@ -3,11 +3,18 @@ import { useSelector, useDispatch } from 'react-redux';
 import gsap from 'gsap';
 import '../../assets/styles/Animation.css';
 
-const AnimatedButton = ({ color, label, hoverLabel, btnWidth, isClassName, classMe }) => {
+const AnimatedButton = ({
+  color,
+  label,
+  hoverLabel,
+  btnWidth,
+  isClassName,
+  classMe,
+}) => {
   const btnRef = useRef(null);
   const [currentLabel, setCurrentLabel] = useState(label);
   const themeValues = useSelector((state) => state.theme);
- 
+
   const onEnter = () => {
     const labelEl = btnRef.current.querySelector('.btn-label');
 
@@ -15,9 +22,8 @@ const AnimatedButton = ({ color, label, hoverLabel, btnWidth, isClassName, class
       duration: 0.3,
       ease: 'power3.out',
       top: '0%',
-     backgroundColor: themeValues.mode==="dark" ? "#fff" : "#000",
-     borderRadius:"10%"
-    
+      backgroundColor: themeValues.mode === 'dark' ? '#fff' : '#000',
+      borderRadius: '10%',
     });
 
     gsap.to(labelEl, {
@@ -77,7 +83,7 @@ const AnimatedButton = ({ color, label, hoverLabel, btnWidth, isClassName, class
           fontWeight: '600',
           width: btnWidth,
         }}
-        className={isClassName ? classMe : "gsap-btn"}
+        className={isClassName ? classMe : 'gsap-btn'}
         ref={btnRef}
         onMouseEnter={onEnter}
         onMouseLeave={onLeave}
